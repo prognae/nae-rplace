@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>trypost</h1>
+    <form action="/trypost" method="post">
+        <button onclick="postRequest()" type="submit" >POST</button>
+    </form>
+</body>
+
+<script>
+    function postRequest() {
+        // Define the coordinates and color of the pixel to be updated
+        const pixel = {
+        x: 100,
+        y: 100,
+        color: '#ff0000' // red color
+        };
+
+        console.log(JSON.stringify(pixel))
+
+        // Send an HTTP POST request to update the pixel on the server
+        fetch('/save', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(pixel)
+        })
+        .then(response => {
+        if (!response.ok) {
+            throw new Error('Failed to update pixel');
+        }
+        // Handle successful response
+        })
+        .catch(error => {
+        console.error(error);
+        // Handle error
+        });
+    }
+</script>
+</html>

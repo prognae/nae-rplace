@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <div id="guide"></div>
+        <canvas class="pixelCanvas" width="1000" height="1000" id="pixelCanvas" style="background-color: rgb(3, 0, 0);"></canvas>
+    </div>
+</body>
+
+<script>
+    const canvas = document.getElementById('pixelCanvas');
+    const context = canvas.getContext('2d');
+
+    // set the fill color to red
+    context.fillStyle = 'white'
+
+   // round the coordinates to the nearest integer value
+        const x = Math.floor(10);
+        const y = Math.floor(10);
+
+        // draw a square with dimensions of 10x10 pixels at the rounded coordinates
+        context.fillRect(x, y, 1, 1);    
+</script>
+</html>

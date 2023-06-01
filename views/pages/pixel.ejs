@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/style.css">
+    <title>Document</title>
+</head>
+<body>  
+    <div>
+        <div id="guide"></div>
+        <center>
+            <canvas class="pixelCanvas" height="800" width="1500" id="pixelCanvas" style="background-color: rgb(255, 255, 255);" onclick="postRequest()" ></canvas>
+        </center>        
+    </div>
+    <div>
+        <label for="colorInput"></label>
+        <input type="color" id="colorInput">
+    </div>    
+    <div>
+        <button onclick="postRequest()">POST!</button>
+        <div id="tooltip"></div>
+        <div id="pixels"></div>
+    </div>
+        
+</body>
+<script src="/assets/scripts/pixel.js"></script>
+</html>

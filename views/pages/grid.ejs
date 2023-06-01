@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Canvas Grid Example</title>
+	<style>
+		canvas {
+			border: 1px solid black;
+		}
+	</style>
+</head>
+<body>
+	<canvas id="myCanvas"></canvas>
+	<script>
+		const canvas = document.getElementById('myCanvas');
+		const ctx = canvas.getContext('2d');
+		const canvasWidth = canvas.width = 200; // set canvas width
+		const canvasHeight = canvas.height = 200; // set canvas height
+		const pixelSize = 10; // size of each pixel
+		const numPixels = canvasWidth / pixelSize; // number of pixels in a row/column
+
+		// draw grid
+		for (let x = 0; x < numPixels; x++) {
+			for (let y = 0; y < numPixels; y++) {
+				ctx.strokeRect(x * pixelSize, y * pixelSize, pixelSize, pixelSize);
+			}
+		}
+	</script>
+</body>
+</html>
