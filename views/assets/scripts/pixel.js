@@ -1,5 +1,5 @@
 //websocket connection
-const socket = new WebSocket('ws://localhost:9000');
+const socket = new WebSocket('ws://nae-rplace-production.up.railway.app/');
 
 //connection opened
 socket.addEventListener('open', function (event) {
